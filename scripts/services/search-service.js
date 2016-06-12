@@ -14,7 +14,7 @@ angular.module("whatapop").service("SearchService", function ($http) {
     // absolute trace to the needed picture
     this.absoluteImagePath = function (relativePath) {
 
-        return relativePath ? ("http://localhost:3000/" + relativePath) : undefined ;
+        return relativePath ? ("http://localhost:3000/static/" + relativePath) : undefined ;
     };
 
 });

@@ -1,4 +1,13 @@
 <!-- All the articles -->
-<div>
-    <div ng-repeat="art in $ctrl.article"><a ng-link="['ProductDetails', {id: art.id}]">{{art.name}}</a></div>
+<div class="row search">
+    <div class="three columns searchResult" ng-repeat="art in $ctrl.article">
+        <div>
+            <img ng-src="{{$ctrl.imagePath(art.photos)}}" alt="{{art.name}}">
+        </div>
+        <div>
+            <a ng-link="['ProductDetails', {id: art.id}]">
+                {{art.name}}
+            </a>
+        </div>
+    </div>
 </div>
