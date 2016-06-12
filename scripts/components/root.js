@@ -3,5 +3,14 @@
  */
 
 angular.module("whatapop").component("root", {
-
+    $routeConfig: [{
+        name: "Details",
+        path: "/products/:id",
+        component: "details"
+    }, {
+        name: "Search",
+        path: "/",
+        component: "search"
+    }],
+    templateUrl: "views/root.html"
 });

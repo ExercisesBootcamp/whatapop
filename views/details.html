@@ -1,0 +1,13 @@
+<div>
+    <div><a ng-link="['Search']">Back to list</a></div>
+    <div>
+        <div>Name: {{ $ctrl.arti.name }}</div><br />
+        <div>Description: {{ $ctrl.arti.description }}</div><br />
+        <div>Category: {{ $ctrl.arti.category.name }}</div><br />
+        <div>Seller: {{ $ctrl.arti.seller.nick }}</div><br />
+        <div>Publish date: {{ $ctrl.arti.published_date}}</div><br />
+        <div>State: {{ $ctrl.arti.state }}</div><br />
+        <div>Price: {{ $ctrl.arti.price }}</div><br />
+        <div><img ng-src="{{$ctrl.imagePath($ctrl.arti.photos)}}"></div>
+    </div>
+</div>
