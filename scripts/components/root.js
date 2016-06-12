@@ -4,9 +4,9 @@
 
 angular.module("whatapop").component("root", {
     $routeConfig: [{
-        name: "Details",
+        name: "ProductDetails",
         path: "/products/:id",
-        component: "details"
+        component: "productDetails"
     }, {
         name: "Search",
         path: "/",

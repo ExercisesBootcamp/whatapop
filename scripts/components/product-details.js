@@ -1,7 +1,7 @@
 /**
  * Created by juan_arillo on 11/6/16.
  */
-angular.module("whatapop").component("details", {
+angular.module("whatapop").component("productDetails", {
 
     // Component View
     templateUrl: "views/details.html",
