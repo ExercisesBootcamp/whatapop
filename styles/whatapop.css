@@ -3,6 +3,15 @@
     margin-right: .5em;
 }
 
+.buttonPers {
+    border-style: none;
+}
+
+.buttonPers:hover {
+    color: red;
+    font-size: .8em;
+}
+
 .categoryButton {
     margin-right: 1.4em;
 }
@@ -50,6 +59,7 @@ img {
 
 .searchbox {
     margin-top: .5em;
+    border: 1px solid darkblue
 }
 
 .searchResult {

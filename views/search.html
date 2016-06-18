@@ -1,9 +1,9 @@
 <!-- All the articles -->
 <div class="row search">
     <div class="buttonlist">
-        <div><button ng-click="$ctrl.categorySearch()">TODOS</button></div>
+        <div><button class="buttonPers" ng-click="$ctrl.categorySearch()">TODOS</button></div>
         <div class="categoryButton" ng-repeat="cat in $ctrl.category">
-            <button ng-click="$ctrl.categorySearch(cat.id)">{{::cat.name}}</button>
+            <button class="buttonPers" ng-click="$ctrl.categorySearch(cat.id)">{{::cat.name}}</button>
         </div>
     </div>
     <searchbox-div></searchbox-div>
