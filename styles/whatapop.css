@@ -1,10 +1,24 @@
-.catContainer {
-    background: white;
+.buttonlist div {
+    display: inline-block;
+    margin-right: .5em;
 }
 
-.category {
+.categoryButton {
+    margin-right: 1.4em;
+}
+
+.detail {
     display: inline-block;
-    margin: 1em 5em 1em 5em;
+}
+
+.detailImage {
+    width: 50%;
+    height: 50%;
+}
+
+.detailAvatarImage {
+    width: 10%;
+    height: 10%;
 }
 
 header {
@@ -30,10 +44,6 @@ img {
     text-decoration: none;
 }
 
-.category a:hover {
-    color: red;
-}
-
 .search {
     text-align: center;
 }
@@ -48,4 +58,28 @@ img {
     margin: .7px;
     margin-bottom: 10px;
     padding: 8px;
+}
+
+.searchTitle {
+    text-decoration: none;
+    color: darkblue;
+}
+
+table {
+    table-layout: fixed;
+}
+
+td {
+    border-style: none;
+}
+
+.imgTd {
+    text-align: center;
+    vertical-align: top;
+    width: 50%;
+    height: 50%;
+}
+
+a:hover {
+    color: red;
 }
