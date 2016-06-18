@@ -7,7 +7,7 @@ angular.module("whatapop").component("productDetails", {
     templateUrl: "views/details.html",
 
     // Component logic
-    controller: function (DetailsService) {
+    controller: function (DetailsService, $sce) {
 
         var self = this;
 
@@ -18,8 +18,10 @@ angular.module("whatapop").component("productDetails", {
                 
                 //getting http response´s body
                 self.arti = article.data;
+                self.description = $sce.trustAsHtml(self.arti.description);
 
             });
+
 
         };
 
