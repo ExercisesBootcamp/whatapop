@@ -7,9 +7,10 @@ angular.module("whatapop").component("search", {
     templateUrl: "views/search.html",
     
     // Component logic
-    controller: function (SearchService) {
+    controller: function (SearchService, CategoryService, $filter) {
 
         var self = this;
+        var article;
 
         // Starts when component begins
         self.$onInit = function () {
@@ -18,10 +19,31 @@ angular.module("whatapop").component("search", {
             SearchService.getProducts().then(function (articles) {
 
                 // getting http response´s body
-                self.article = articles.data;
+                article = articles.data;
+                self.article = article;
+                //self.article = articles.data;
 
             });
+
+            CategoryService.getCategories().then(function (categories) {
+
+                self.category = categories.data;
+
+            });
+
             
+        };
+
+        self.categorySearch = function (categoryId) {
+            self.article = categoryId ? $filter("filter")(article, {
+               category: {id: categoryId}
+            }) : article;
+            /*self.article = categoryId ? $filter("filter") : article;
+            self.article = $filter('filter')(article, {
+                "category": {
+                    "id": categoryId
+                }
+            });*/
         };
 
         // getting absolute path to the picture

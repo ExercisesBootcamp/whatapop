@@ -1,12 +1,19 @@
 <!-- All the articles -->
 <div class="row search">
-    <div class="three columns searchResult" ng-repeat="art in $ctrl.article">
+    <div class="catContainer">
+        <div><button ng-click="$ctrl.categorySearch()">TODOS</button></div>
+        <div class="three category" ng-repeat="cat in $ctrl.category">
+            <button ng-click="$ctrl.categorySearch(cat.id)">{{::cat.name}}</button>
+        </div>
+    </div>
+    <searchbox-div></searchbox-div>
+    <div class="three columns searchResult" ng-repeat="art in $ctrl.article | filter:searchText | filter: categoria">
         <div>
-            <img ng-src="{{$ctrl.imagePath(art.photos)}}" alt="{{art.name}}">
+            <img ng-src="{{$ctrl.imagePath(art.photos)}}" alt="{{::art.name}}">
         </div>
         <div>
             <a ng-link="['ProductDetails', {id: art.id}]">
-                {{art.name}}
+                {{::art.name}}
             </a>
         </div>
     </div>

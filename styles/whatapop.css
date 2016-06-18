@@ -1,3 +1,12 @@
+.catContainer {
+    background: white;
+}
+
+.category {
+    display: inline-block;
+    margin: 1em 5em 1em 5em;
+}
+
 header {
     margin-bottom: 1em;
 }
@@ -7,13 +16,30 @@ header div{
     vertical-align: middle;
 }
 
+.heading {
+    text-align: center;
+}
+
 img {
     width: 95%;
     height: 95%;
 }
 
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.category a:hover {
+    color: red;
+}
+
 .search {
     text-align: center;
+}
+
+.searchbox {
+    margin-top: .5em;
 }
 
 .searchResult {

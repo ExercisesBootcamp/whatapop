@@ -16,5 +16,6 @@ angular.module("whatapop").service("SearchService", function ($http) {
 
         return relativePath ? ("http://localhost:3000/static/" + relativePath) : undefined ;
     };
+    
 
 });
